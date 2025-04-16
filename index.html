@@ -1,0 +1,215 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike Style Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1606811842864-69b3e4ce43d4?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      background: #000;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #444;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 60px 20px;
+      background: #f0f0f0;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      flex: 1;
+      max-width: 300px;
+      cursor: pointer;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, filter 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .category:hover {
+      transform: scale(1.05);
+      filter: brightness(0.9);
+    }
+
+    .category img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .category h3 {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #fff;
+    }
+
+    section.products {
+      padding: 40px 20px;
+    }
+
+    section.products h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.2s;
+      background: #fff;
+    }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h4 {
+      margin: 10px 0;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    #google_translate_element {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+  </style>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'ru'}, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+
+  <div id="google_translate_element"></div>
+
+  <header>
+    <h1>NIKE STORE</h1>
+    <p>Новая коллекция весна–лето 2025</p>
+    <button class="btn" onclick="document.getElementById('categories').scrollIntoView({behavior: 'smooth'})">Смотреть категории</button>
+  </header>
+
+  <section class="categories" id="categories">
+    <a class="category" href="#mens">
+      <img src="https://images.unsplash.com/photo-1600185365927-3fc9dc7c1d93?auto=format&fit=crop&w=400&h=300&q=80" alt="Мужская одежда">
+      <h3>Мужская одежда</h3>
+    </a>
+    <a class="category" href="#womens">
+      <img src="https://images.unsplash.com/photo-1593032465171-bfd7e49f2046?auto=format&fit=crop&w=400&h=300&q=80" alt="Женская одежда">
+      <h3>Женская одежда</h3>
+    </a>
+    <a class="category" href="#kids">
+      <img src="https://images.unsplash.com/photo-1526178614443-1d9b8d70ec5e?auto=format&fit=crop&w=400&h=300&q=80" alt="Детская одежда">
+      <h3>Детская одежда</h3>
+    </a>
+  </section>
+
+  <section class="products" id="mens">
+    <h2>Мужская одежда</h2>
+    <div class="product-grid">
+      <div class="product"><img src="https://images.unsplash.com/photo-1618354691436-a60295eb75f2?auto=format&fit=crop&w=400&q=80"><h4>Куртка Nike</h4></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1593032457869-3a8f163f7d1a?auto=format&fit=crop&w=400&q=80"><h4>Спортивные штаны</h4></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1602810311438-33f6f15c6b85?auto=format&fit=crop&w=400&q=80"><h4>Толстовка</h4></div>
+    </div>
+  </section>
+
+  <section class="products" id="womens">
+    <h2>Женская одежда</h2>
+    <div class="product-grid">
+      <div class="product"><img src="https://images.unsplash.com/photo-1592878904944-9f2f1ffb3c6d?auto=format&fit=crop&w=400&q=80"><h4>Леггинсы</h4></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1593032438675-5a93252c0c91?auto=format&fit=crop&w=400&q=80"><h4>Топ Nike</h4></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1519741491051-40f2485fd5e3?auto=format&fit=crop&w=400&q=80"><h4>Женская куртка</h4></div>
+    </div>
+  </section>
+
+  <section class="products" id="kids">
+    <h2>Детская одежда</h2>
+    <div class="product-grid">
+      <div class="product"><img src="https://images.unsplash.com/photo-1606294268984-d3fe7fddbff7?auto=format&fit=crop&w=400&q=80"><h4>Детский костюм</h4></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1618354690633-278237fb2d1c?auto=format&fit=crop&w=400&q=80"><h4>Футболка для детей</h4></div>
+      <div class="product"><img src="https://images.unsplash.com/photo-1537461418257-467cfc5f15be?auto=format&fit=crop&w=400&q=80"><h4>Толстовка</h4></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nike Store. Все права защищены.</p>
+  </footer>
+</body>
